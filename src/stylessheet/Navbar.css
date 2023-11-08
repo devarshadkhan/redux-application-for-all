@@ -1,0 +1,17 @@
+.header_wrp {}
+.dd{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.dd h6{
+    font-size: 20px;
+}
+.header_wrp nav{
+    background-image: linear-gradient(170deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    box-shadow: none;
+}
+.list_wrp{}
+.list_wrp_ul {padding: 0;display: flex;gap: 20px;justify-content: flex-end;}
+.list_wrp_li{padding: 0;}
+.list_wrp_li a{text-decoration: none;color: #fff;}
