@@ -99,22 +99,22 @@
 
 import React, { useState } from 'react';
 import { Tab, Tabs, Button } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+// import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-  },
-  tabContent: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-});
+// const useStyles = makeStyles({
+  // container: {
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  //   height: '100vh',
+  // },
+  // tabContent: {
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   alignItems: 'center',
+  // },
+// });
 
 const tabData = ['Tab 1', 'Tab 2', 'Tab 3'];
 const tabContents = [
@@ -124,7 +124,6 @@ const tabContents = [
 ];
 
 function Todo() {
-  const classes = useStyles();
   const [selectedTab, setSelectedTab] = useState(0);
   const [displayedData, setDisplayedData] = useState(tabContents[selectedTab].slice(0, 3));
 
@@ -145,13 +144,13 @@ function Todo() {
   };
 
   return (
-    <div className={classes.container}>
+    <div className={"container"}>
       <Tabs value={selectedTab} onChange={handleTabChange}>
         {tabData.map((tab, index) => (
           <Tab label={tab} key={index} />
         ))}
       </Tabs>
-      <div className={classes.tabContent}>
+      <div className={"tabContent"}>
         {displayedData.map((data, index) => (
           <div key={index}>{data}</div>
         ))}
