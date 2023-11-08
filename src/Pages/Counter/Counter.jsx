@@ -24,6 +24,7 @@ const Counter = () => {
                    </Box>
                 </Grid>
             </Grid>
+
         </Container>
        </Box> 
     </>
@@ -31,3 +32,23 @@ const Counter = () => {
 }
 
 export default Counter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

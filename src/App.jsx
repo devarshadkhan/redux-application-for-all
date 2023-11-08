@@ -5,6 +5,7 @@ import Counter from './Pages/Counter/Counter'
 import CssBaseline from '@mui/material/CssBaseline';
 import Navbar from './Components/Navbar';
 import { Toolbar } from '@mui/material';
+import Todo from './Pages/Todo/Todo';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
     <Toolbar />
     <Navbar />
       <Routes>
-        <Route path="/" element={<Counter/>} />
+        <Route path="/" element={<Todo/>} />
         </Routes>
     </BrowserRouter>
     </>
