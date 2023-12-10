@@ -12,6 +12,6 @@
     box-shadow: none;
 }
 .list_wrp{}
-.list_wrp_ul {padding: 0;display: flex;gap: 20px;justify-content: flex-end;}
+.list_wrp_ul {padding: 0;display: flex;gap: 20px;justify-content: flex-end;align-items: center;}
 .list_wrp_li{padding: 0;}
 .list_wrp_li a{text-decoration: none;color: #fff;}
