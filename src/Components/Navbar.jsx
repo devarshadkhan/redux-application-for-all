@@ -17,10 +17,17 @@ import Button from "@mui/material/Button";
 import { Container, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import "../stylessheet/Navbar.css";
+import { useSelector } from "react-redux";
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+// import IconButton from '@mui/material/IconButton';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
 
 function DrawerAppBar(props) {
+  const count = useSelector((state) => state.count);
+  console.log(count);
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -47,7 +54,6 @@ function DrawerAppBar(props) {
           </ListItem>
         ))}
       </List>
-      
     </Box>
   );
 
@@ -72,24 +78,39 @@ function DrawerAppBar(props) {
             <Grid container>
               {/* Logo Here */}
               <Grid item lg={3}>
-                <Box className="dd" component={"div"} >
-                <h6>React Redux Application</h6>
+                <Box className="dd" component={"div"}>
+                  <h6>React Redux Application</h6>
                 </Box>
               </Grid>
               {/* Listing Items for Linking */}
-              <Grid item lg={9} sx={{ display: { xs: "none", sm: "block" }}} >
+              <Grid item lg={9} sx={{ display: { xs: "none", sm: "block" } }}>
                 <Box className="list_wrp_ul" component={"ul"}>
                   <Box className="list_wrp_li" component={"li"}>
-                    <Link to={""} spy={true} smooth={true}  >Counter App</Link>
+                    <Link to={""} spy={true} smooth={true}>
+                      Counter App
+                    </Link>
                   </Box>
                   <Box className="list_wrp_li" component={"li"}>
-                    <Link spy={true} smooth={true}  to={""}>Todo App</Link>
+                    <Link spy={true} smooth={true} to={""}>
+                      Todo App
+                    </Link>
                   </Box>
                   <Box className="list_wrp_li" component={"li"}>
-                    <Link spy={true} smooth={true}  to={""}>Fetch API App</Link>
+                    <Link spy={true} smooth={true} to={""}>
+                      Fetch API App
+                    </Link>
                   </Box>
                   <Box className="list_wrp_li" component={"li"}>
-                    <Link spy={true} smooth={true}  to={""}>Ecommerce Cart App</Link>
+                    <Link spy={true} smooth={true} to={""}>
+                      Ecommerce Cart App
+                    </Link>
+                  </Box>
+                  <Box className="list_wrp_li" component={"li"}>
+                    <IconButton aria-label="cart">
+                      <Badge badgeContent={count || "0"} color="secondary">
+                        <ShoppingCartIcon />
+                      </Badge>
+                    </IconButton>
                   </Box>
                   {/* <Box className="list_wrp_li" component={"li"}>
                     <Link to={""}>Home</Link>
